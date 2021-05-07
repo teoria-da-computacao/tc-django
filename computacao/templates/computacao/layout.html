@@ -28,22 +28,15 @@
         <h1>Teoría da Computação</h1>
         <nav>
             <a href="{% url 'computacao:index' %}" class="btn btn-info" role="button">Introdução</a>
-            <a href="{% url 'computacao:afd0' %}" class="btn btn-info" role="button">AFD 0's</a>
+
             <a href="{% url 'computacao:automatos' %}" class="btn btn-info" role="button">Autómatos</a>
-            <a href="{% url 'computacao:novo_automato' %}" class="btn btn-info" role="button">Criação de um Autómato</a>
+
+            <a href="" class="btn btn-info" role="button">Máquinas de Turing</a>
         </nav>
     </header>
     <div  class="text-center">
          {% block main %}
         {% endblock %}
-
-    {% block aside %}
-        <aside class="col-sm-6 text-center">
-            <br><br><br>
-            {% load static %}
-            <img src="{% static 'computacao/images/turing-machine.png' %}" alt="">
-        </aside>
-    {% endblock %}
     </div>
 
 </body>

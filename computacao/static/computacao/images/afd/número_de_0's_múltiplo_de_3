@@ -3,14 +3,17 @@ digraph "Autómato que aceita sequencias binárias que têm um número de 0's m�
 	node [shape=circle]
 	edge [arrowhead=vee arrowsize=1]
 	Start [label="" shape=none]
-	A
 	B
-	C [shape=doublecircle]
+	C
+	A
+	D [shape=doublecircle]
 	Start -> A
 	A -> A [label=1]
 	A -> B [label=0]
 	B -> B [label=1]
 	B -> C [label=0]
 	C -> C [label=1]
-	C -> A [label=0]
+	C -> D [label=0]
+	D -> B [label=0]
+	D -> D [label=1]
 }

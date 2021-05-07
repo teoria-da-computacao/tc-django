@@ -75,7 +75,15 @@ def edita_automato(request, automato_id):
         form = AutomatoForm(request.POST)
         form.save()"""
 
-    automato_a_editar = Automato.objects.get(pk=automato_id)
+    instance = Automato.objects.get(id=automato_id)
+    form = AutomatoForm(request.POST or None, instance=instance)
+    if form.is_valid():
+        a = form.save()
+        a.desenha_diagrama()
+        a.save()
+        return HttpResponseRedirect(reverse('computacao:automatos'))
+
+    """
     form = AutomatoForm(initial={
         'nome': automato_a_editar.nome,
         'descricao': automato_a_editar.descricao,
@@ -84,8 +92,8 @@ def edita_automato(request, automato_id):
         'estadoInicial': automato_a_editar.estadoInicial,
         'estadosDeAceitacao': automato_a_editar.estadosDeAceitacao,
         'dicionarioTransicao': automato_a_editar.dicionarioTransicao,
-    })
-    context = {'form': form}
+    })"""
+    context = {'form': form, 'automato_id':automato_id}
     return render(request, 'computacao/edita_automato.html', context)
 
 def apaga_automato(request, automato_id):

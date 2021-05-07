@@ -1,12 +1,12 @@
 {% extends 'computacao/layout.html' %}
 
 {% block main %}
-    <main class="col-sm-6">
+    <main class="col-sm-12">
         <h3>Autómato Finito Determinístico</h3>
         <p>Pode aqui especificar um novo autómato que ficará armazenado na base de dados, juntamente com o seu diagrama.
             O autómato será implementado e poderá ser usado.</p>
 
-        <form class="form-group" action="{% url 'computacao:novo_automato' %}" method="POST">
+        <form class="form-group" action="{% url 'computacao:edita_automato' automato_id %}" method="POST">
 
             {% csrf_token %}
 

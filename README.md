@@ -9,7 +9,7 @@ Web App base em Django para website de Teoria da Computação
 1. Active o ambiente virtual `virtual\Scripts\activate`
 2. Instale o django `python -m pip install django`
 3. Lance a aplicação no browser com o comando `python manage.py runserver`
-4. abra a aplicação no Pycharm com o comando `pycharm .` ou no VS Code com o comando `code .`
+4. abra a pasta com o Pycharm, ou com o comando `pycharm .`
 
 ### Passos para criar uma nóva página na aplicação
 1. no ficheiro `views.py` crie uma nova função que renderize a nova página

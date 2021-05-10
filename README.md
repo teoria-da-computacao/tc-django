@@ -6,12 +6,18 @@ Web App base em Django para website de Teoria da Computação
 1. Descarregue uma cópia (clone) do repositório com o comando `git clone https://github.com/teoria-da-computacao/tc-django` ou descarregue o projeto como um zip e descompacte
 1. Entre na pasta  `cd tc-django`
 2. Crie e instale um ambiente virtual. Use o venv ou o pipenv.
-3. Instale o pipenv `python -m pip install pipenv`
-4. Crie um ambiente virtual com o django instalado `pipenv install django`
-5. Instale o graphviz `pipenv install graphviz`
-6. Active o ambiente virtual `pipenv shell`
-7. Lance a aplicação no browser com o comando `python manage.py runserver`
-8. abra a pasta com o Pycharm, ou com o comando `pycharm .`
+3. com venv
+    1. Crie um ambiente virtual python -m venv virtual
+    1. Active o ambiente virtual virtual\Scripts\activate
+    1. Instale o django `python -m pip install django`
+    2. Instale o graphviz `python -m pip install graphviz`
+4. com pipenv 
+    1. Instale o pipenv `python -m pip install pipenv`
+    1. Crie um ambiente virtual com o django instalado `pipenv install django`
+    1. Active o ambiente virtual `pipenv shell`
+    2. Instale o graphviz `pipenv install graphviz`
+5. Lance a aplicação no browser com o comando `python manage.py runserver`
+6. abra a pasta com o Pycharm, ou com o comando `pycharm .`
 
 ### Passos para criar uma nóva página na aplicação
 1. no ficheiro `views.py` crie uma nova função que renderize a nova página

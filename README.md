@@ -3,9 +3,9 @@ Web App base em Django para website de Teoria da Computação
 
 ### Passos para lançar e editar a aplicação
 1. Abra a linha de comandos (PowerShell ou cmd)
-1. Descarregue uma cópia (clone) do repositório com o comando `git clone https://github.com/teoria-da-computacao/tc-django` 
+1. Descarregue uma cópia (clone) do repositório com o comando `git clone https://github.com/teoria-da-computacao/tc-django` ou descarregue o projeto como um zip e descompacte
 1. Entre na pasta  `cd tc-django`
-2. Instalam o pipenv `python -m pip install pipenv`
+2. Instale o pipenv `python -m pip install pipenv`
 3. Crie um ambiente virtual com o django instalado `pipenv install django`
 4. Active o ambiente virtual `pipenv shell`
 6. Lance a aplicação no browser com o comando `python manage.py runserver`

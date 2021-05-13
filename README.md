@@ -45,3 +45,19 @@ Execute os seguintes comandos para pôr o seu projeto e app a correr na cloud!
 9. lançamos a aplicação	`heroku ps:scale web=1`
 10. confirmamos se a app esta online `heroku open`
 
+
+### App a correr no  Heroku com venv ⛅
+1. considera-se que tem o Heroku instalado. Na consola, faça login `heroku login`
+2. ative o ambiente virtual `virtual/Scripts/activate`
+3. Instale o servidor web Python gunicorn, no ambiente virtual ativo, `python -m pip install gunicorn`
+4. Crie Procfile (sem extensao), com o nome da vossa aplicação (exemplo para se for helloworld): `web: gunicorn helloworld:app
+5. Crie ficheiro requirements.txt com o comando `virtual\Scripts\pip freeze > requirements.txt`
+6. crie ficheiro runtime.txt a indicar a versão do Python instalada no ambiente virtual. PAra a obter execute o comando `python -V`. O que é impresso guarde no ficheiro, por exemplo `python-3.8.2`
+7. Crie um repositório local `git init`
+8. adicione os seus ficheiros ao repositório online `git add .`
+9. faça commit do seus ficheiros `git commit –m "Primeiro commit"`
+10. Crie uma app Heroku vazia `heroku create` (será atribuido um nome; se quiser especificar um nome diferente, pode fazer `heroku create helloworld`)
+11. Envie a sua aplicação para Heroku `git push heroku master`
+12. Assegure-se que a app está a correr `heroku ps:scale web=1`
+13. Se não houver erros, o seu website estará live em https://helloworld.herokuapp.com 
+14. Se surgirem erros, visite https://devcenter.heroku.com/articles/git

@@ -1,6 +1,8 @@
 # Web app de Teoria da Computação
 Web App base em Django para website de Teoria da Computação
 
+![](aplicacao.png)
+
 ### Passos para lançar e editar a aplicação
 1. Abra a linha de comandos (PowerShell ou cmd)
 1. Descarregue uma cópia (clone) do repositório com o comando `git clone https://github.com/teoria-da-computacao/tc-django` ou descarregue o projeto como um zip e descompacte
